@@ -16,11 +16,11 @@ LIBVULKAN_VERSION_MAJOR=1
 	dh $@
 
 override_dh_auto_configure:
-	wget $(URL) && chmod +x $(FILENAME).bin
+	wget -c $(URL) && chmod +x $(FILENAME).bin
 	./$(FILENAME).bin --auto-accept
 	mv $(FILENAME)/* .
 	rm -rf $(FILENAME)
-	mv -n gpu-core/usr/lib/mx*/* gpu-core/usr/lib/
+	mv -n gpu-core/usr/lib/mx8mn/* gpu-core/usr/lib/
 # Separate .so files for the development package
 # In NXP BSP, currently all development time .so symlinks, except libGL.so,
 # are dev-so INSANE_SKIP-ed. Strace of programs such as kmscube show that these
