@@ -1,0 +1,6 @@
+COPYING
+SCR-imx-gpu-viv.txt
+gpu-core/
+gpu-demos/
+gpu-tools/
+imx-gpu-viv-*aarch64*
